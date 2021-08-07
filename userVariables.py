@@ -1,6 +1,6 @@
 # Set your preferences here
 
-# Enter valid API keys
+# Enter valid API keys or the program will not work
 BINANCE_API_KEY = ''
 BINANCE_SECRET_KEY = ''
 use_testnet = True # Set to True use a testnet else False

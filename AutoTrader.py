@@ -117,7 +117,7 @@ async def my_signals(model, scaler, data_frame, signals, finish): # Sample strat
                 await signals.put(0)
         else:
             avg = df.iloc[-60:, 4].mean()
-            if (avg - last_price) / last_price > (tp / 10):
+            if (avg - last_price) / last_price > tp:
                 await signals.put(1)
             else:
                 await signals.put(0)
