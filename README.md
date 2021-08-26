@@ -41,7 +41,15 @@ Python modules (can be installed with pip install *****)
 - sklearn (optional to use AI startegy)
 - tensorflow (optional to use AI startegy)
 
-### About the programmer
+## Update
+I've been working on a GUI for the program so it can be packaged as an 
+application and be more user-friendly. This is a completely new aspect 
+of programming for me and I am constantly being exposed to new paradigms 
+but I am enjoying the process and hope to be able to deliver a polished 
+and useful program. The progress I am made on the UI design can be found 
+in the gui folder.
+
+## About the programmer
 My name is Agbodesi Imoagene and I'm 19. I currently reside in Ireland 
 and am a member of Christ Embassy Dublin. I am an undergraduate computer 
 science student at University College Dublin about to begin my second 

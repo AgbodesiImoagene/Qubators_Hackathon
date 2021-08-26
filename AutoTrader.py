@@ -1,5 +1,5 @@
 import asyncio
-# import nest_asyncio
+import nest_asyncio
 import pandas as pd
 import numpy as np
 import binance
@@ -309,7 +309,7 @@ async def trader(clients, filters, open_positions):
     return
 
 if __name__ == '__main__':
-    # nest_asyncio.apply()
+    nest_asyncio.apply()
     loop = asyncio.get_event_loop()
     clients = loop.run_until_complete(create_clients())
     

@@ -11,6 +11,6 @@ TESTNET_SECRET_KEY = 'MGPf0jDxH6QSgu2V41j8qHZ1fZL7Xa478Uwjh5mWvhhSAivceJnZG4F14a
 trade_allocation = 0.2 # Fraction of capital to enter into each trade
 quote = 'USDT' # Quote ticker
 base = 'BTC' # Base ticker
-close_time = '18:30:00' # Enter the desired closing time in the form 'HH:MM:SS' in GMT
+close_time = '23:30:00' # Enter the desired closing time in the form 'HH:MM:SS' in GMT
 tp = 0.02 # Enter the take-profit limit as a fraction of lot size
 sl = 0.01 # Enter the stop-loss limit as a fraction of lot size
