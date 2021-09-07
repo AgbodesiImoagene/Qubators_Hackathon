@@ -33,21 +33,19 @@ closingTime = ''
 startBaseBalance = ''
 startQuoteBalance = ''
 
-# class App(threading.Thread):
-#     def __init__(self):
-#         threading.Thread.__init__(self)
-#         self.start()
+class App(threading.Thread):
+    def __init__(self):
+        threading.Thread.__init__(self)
+        self.root = Tk()
+        self.start()
         
-#     def callback(self):
-#         self.root.quit()
+    def callback(self):
+        self.root.quit()
         
-#     def run(self):
-#         self.root = Tk()
-#         self.root.protocol("WM_DELETE_WINDOW", self.callback)
+    def run(self):
+        self.root.protocol("WM_DELETE_WINDOW", self.callback)
 
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
-
+         
 def initGUI():
     introFrame = Frame(
         window,
@@ -1239,7 +1237,8 @@ if __name__ == '__main__':
     nest_asyncio.apply()
     loop = asyncio.get_event_loop()
     
-    window = Tk()
+    application =  App()
+    window = application.root
     window.title("AutoTrader")
     
     window.geometry("800x400")

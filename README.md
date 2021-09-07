@@ -49,6 +49,15 @@ but I am enjoying the process and hope to be able to deliver a polished
 and useful program. The progress I am made on the UI design can be found 
 in the gui folder.
 
+## Second Update
+I have finally completed the application GUI. AutoTrader is now a fully 
+funcional trading program that is simple and easy to use. I had some 
+challenges packaging the tensorflow model so it is not included in this 
+version but better models and more trading strategies will be included in 
+future updates. 
+
+- AutoTrader.exe
+
 ## About the programmer
 My name is Agbodesi Imoagene and I'm 19. I currently reside in Ireland 
 and am a member of Christ Embassy Dublin. I am an undergraduate computer 
