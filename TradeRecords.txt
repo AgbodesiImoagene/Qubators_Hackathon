@@ -1,0 +1,505 @@
+Wed Sep  8 14:10:30 2021
+Opening balance: 68.89882425 USDT. 
+14:10
+Trade 1 
+Bought 0.00032 BTC at 46418.73 USDT per BTC (14.853993600000003 USDT). 
+14:11
+Closed trade 1 
+Sold 0.00032 BTC at 46400.47 USDT per BTC (14.848150400000002 USDT). 
+Closing balance: 68.89297785 USDT. 
+
+Testnet 
+Wed Sep  8 17:51:41 2021
+Opening balance: 5381.88534889 USDT. 
+Testnet 
+Wed Sep  8 18:02:14 2021
+Opening balance: 5381.88534889 USDT. 
+Testnet 
+Closing balance: 5381.88534889 USDT. 
+
+Wed Sep  8 23:24:15 2021
+Opening balance: 68.89627745 USDT. 
+23:25
+Trade 1 
+Bought 0.00032 BTC at 46697.97 USDT per BTC (14.943350400000002 USDT). 
+00:25
+Closed trade 1 
+Sold 0.00032 BTC at 46320.44 USDT per BTC (14.822540800000002 USDT). 
+Closing balance: 68.77838305 USDT. 
+
+Thu Sep  9 00:45:06 2021
+Opening balance: 68.77838305 USDT. 
+Closing balance: 68.77838305 USDT. 
+
+Thu Sep  9 01:29:29 2021
+Opening balance: 68.77838305 USDT. 
+01:29
+Trade 1 
+Bought 0.00033 BTC at 45975.23 USDT per BTC (15.171825900000002 USDT). 
+01:33
+Trade 2 
+Bought 0.00033 BTC at 46003.86 USDT per BTC (15.1812738 USDT). 
+01:34
+Closed trade 1 
+Sold 0.00033 BTC at 46011.54 USDT per BTC (15.1838082 USDT). 
+01:34
+Closed trade 2 
+Sold 0.00033 BTC at 46011.54 USDT per BTC (15.1838082 USDT). 
+Closing balance: 68.78813125 USDT. 
+
+Thu Sep  9 08:31:54 2021
+Opening balance: 68.78813125 USDT. 
+Closing balance: 68.78813125 USDT. 
+
+Thu Sep  9 09:02:38 2021
+Opening balance: 68.78813125 USDT. 
+09:02
+Trade 1 
+Bought 0.00032 BTC at 46309.97 USDT per BTC (14.819190400000002 USDT). 
+09:03
+Trade 2 
+Bought 0.00032 BTC at 46307.7 USDT per BTC (14.818464 USDT). 
+Thu Sep  9 09:28:41 2021
+Opening balance: 39.15064965 USDT. 
+Thu Sep  9 09:33:28 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 09:48:07 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 09:50:15 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 10:03:29 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 10:08:53 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 10:17:38 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 14:06:24 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 14:13:35 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 14:21:46 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 14:24:32 2021
+Opening balance: 77.70257265 USDT. 
+Thu Sep  9 14:54:59 2021
+Opening balance: 77.70257265 USDT. 
+Closing balance: 77.70257265 USDT. 
+
+Thu Sep  9 14:59:45 2021
+Opening balance: 77.70257265 USDT. 
+15:00
+Trade 1 
+Bought 0.00026 BTC at 46875.98 USDT per BTC (12.1877548 USDT). 
+15:00
+Trade 2 
+Bought 0.00026 BTC at 46942.08 USDT per BTC (12.2049408 USDT). 
+15:00
+Trade 3 
+Bought 0.00032 BTC at 46949.94 USDT per BTC (15.023980800000002 USDT). 
+15:00
+Closed trade 2 
+Sold 0.00026 BTC at 46991.76 USDT per BTC (12.2178576 USDT). 
+15:01
+Trade 4 
+Bought 0.00023 BTC at 47015.64 USDT per BTC (10.8135972 USDT). 
+Thu Sep  9 15:09:05 2021
+Opening balance: 78.31965335 USDT. 
+15:09
+Trade 1 
+Bought 0.00025 BTC at 47120.01 USDT per BTC (11.7800025 USDT). 
+15:09
+Trade 2 
+Bought 0.00025 BTC at 47139.53 USDT per BTC (11.7848825 USDT). 
+15:09
+Trade 3 
+Bought 0.00042 BTC at 47120.87 USDT per BTC (19.7907654 USDT). 
+15:09
+Trade 4 
+Bought 0.00032 BTC at 47122.31 USDT per BTC (15.0791392 USDT). 
+15:09
+Closed trade 2 
+Sold 0.00025 BTC at 47125.39 USDT per BTC (11.7813475 USDT). 
+15:10
+Closed trade 1 
+Sold 0.00025 BTC at 47109.43 USDT per BTC (11.7773575 USDT). 
+15:10
+Closed trade 4 
+Sold 0.00032 BTC at 47053.45 USDT per BTC (15.057104 USDT). 
+15:11
+Trade 5 
+Bought 0.00032 BTC at 47048.94 USDT per BTC (15.055660800000002 USDT). 
+Thu Sep  9 15:19:24 2021
+Opening balance: 43.44649945 USDT. 
+15:19
+Trade 1 
+Bought 0.00025 BTC at 47109.15 USDT per BTC (11.7772875 USDT). 
+15:19
+Trade 2 
+Bought 0.00025 BTC at 47081.48 USDT per BTC (11.770370000000002 USDT). 
+15:20
+Trade 3 
+Bought 0.00025 BTC at 47066.43 USDT per BTC (11.766607500000001 USDT). 
+15:20
+Closed trade 3 
+Sold 0.00025 BTC at 47090.79 USDT per BTC (11.7726975 USDT). 
+15:21
+Trade 4 
+Bought 0.00032 BTC at 47074.29 USDT per BTC (15.0637728 USDT). 
+Thu Sep  9 15:23:54 2021
+Opening balance: 47.59051575 USDT. 
+Thu Sep  9 15:27:20 2021
+Opening balance: 47.59051575 USDT. 
+15:27
+Trade 1 
+Bought 0.00026 BTC at 47003.51 USDT per BTC (12.2209126 USDT). 
+15:27
+Trade 2 
+Bought 0.00026 BTC at 46997.71 USDT per BTC (12.219404599999999 USDT). 
+15:27
+Trade 3 
+Bought 0.00026 BTC at 46997.71 USDT per BTC (12.219404599999999 USDT). 
+15:28
+Closed trade 1 
+Sold 0.00026 BTC at 47025.0 USDT per BTC (12.2265 USDT). 
+15:28
+Closed trade 2 
+Sold 0.00026 BTC at 47025.0 USDT per BTC (12.2265 USDT). 
+15:28
+Closed trade 3 
+Sold 0.00026 BTC at 47025.0 USDT per BTC (12.2265 USDT). 
+Closing balance: 47.60186215 USDT. 
+
+Thu Sep  9 18:01:26 2021
+Opening balance: 47.60186215 USDT. 
+18:01
+Trade 1 
+Bought 0.00025 BTC at 47143.38 USDT per BTC (11.785845 USDT). 
+18:01
+Trade 2 
+Bought 0.00025 BTC at 47141.9 USDT per BTC (11.785475 USDT). 
+18:01
+Trade 3 
+Bought 0.00025 BTC at 47141.86 USDT per BTC (11.785465 USDT). 
+18:02
+Closed trade 2 
+Sold 0.00025 BTC at 47141.86 USDT per BTC (11.785465 USDT). 
+18:04
+Closed trade 1 
+Sold 0.00025 BTC at 47233.17 USDT per BTC (11.8082925 USDT). 
+18:04
+Closed trade 3 
+Sold 0.00025 BTC at 47233.17 USDT per BTC (11.8082925 USDT). 
+Closing balance: 47.64923715 USDT. 
+
+Thu Sep  9 18:40:49 2021
+Opening balance: 47.64923715 USDT. 
+18:41
+Trade 1 
+Bought 0.00032 BTC at 46927.88 USDT per BTC (15.0169216 USDT). 
+18:41
+Closed trade 1 
+Sold 0.00032 BTC at 46932.86 USDT per BTC (15.018515200000001 USDT). 
+Closing balance: 47.65234115 USDT. 
+
+Thu Sep  9 19:07:51 2021
+Opening balance: 47.65234115 USDT. 
+19:37
+Trade 1 
+Bought 0.00026 BTC at 46778.6 USDT per BTC (12.162435999999998 USDT). 
+20:34
+Trade 2 
+Bought 0.00026 BTC at 46615.98 USDT per BTC (12.1201548 USDT). 
+21:18
+Trade 3 
+Bought 0.00026 BTC at 46611.54 USDT per BTC (12.1190004 USDT). 
+00:12
+Closed trade 1 
+Sold 0.00026 BTC at 46591.49 USDT per BTC (12.113787399999998 USDT). 
+00:12
+Closed trade 2 
+Sold 0.00026 BTC at 46591.49 USDT per BTC (12.113787399999998 USDT). 
+00:12
+Closed trade 3 
+Sold 0.00026 BTC at 46591.49 USDT per BTC (12.113787399999998 USDT). 
+Closing balance: 47.59371895 USDT. 
+
+Fri Sep 10 00:15:10 2021
+Opening balance: 47.59371895 USDT. 
+01:05
+Trade 1 
+Bought 0.00032 BTC at 46476.37 USDT per BTC (14.872438400000002 USDT). 
+01:05
+Closed trade 1 
+Sold 0.00032 BTC at 46429.24 USDT per BTC (14.8573568 USDT). 
+01:23
+Trade 2 
+Bought 0.00043 BTC at 46419.9 USDT per BTC (19.960557 USDT). 
+01:32
+Closed trade 2 
+Sold 0.00043 BTC at 46513.75 USDT per BTC (20.0009125 USDT). 
+03:30
+Trade 3 
+Bought 0.00085 BTC at 46907.87 USDT per BTC (39.8716895 USDT). 
+03:34
+Closed trade 3 
+Sold 0.00085 BTC at 46859.31 USDT per BTC (39.8304135 USDT). 
+04:37
+Trade 4 
+Bought 0.00086 BTC at 46657.07 USDT per BTC (40.1250802 USDT). 
+04:41
+Closed trade 4 
+Sold 0.00086 BTC at 46600.79 USDT per BTC (40.0766794 USDT). 
+04:57
+Trade 5 
+Bought 0.00086 BTC at 46645.35 USDT per BTC (40.115001 USDT). 
+05:02
+Closed trade 5 
+Sold 0.00086 BTC at 46748.86 USDT per BTC (40.2040196 USDT). 
+06:37
+Trade 6 
+Bought 0.00086 BTC at 46575.61 USDT per BTC (40.0550246 USDT). 
+06:53
+Closed trade 6 
+Sold 0.00086 BTC at 46674.99 USDT per BTC (40.140491399999995 USDT). 
+09:01
+Trade 7 
+Bought 0.00086 BTC at 46247.98 USDT per BTC (39.773262800000005 USDT). 
+09:01
+Closed trade 7 
+Sold 0.00086 BTC at 46198.01 USDT per BTC (39.7302886 USDT). 
+09:07
+Trade 8 
+Bought 0.00087 BTC at 46212.86 USDT per BTC (40.2051882 USDT). 
+09:08
+Closed trade 8 
+Sold 0.00087 BTC at 46308.48 USDT per BTC (40.288377600000004 USDT). 
+09:58
+Trade 9 
+Bought 0.00087 BTC at 46012.1 USDT per BTC (40.030527 USDT). 
+09:58
+Closed trade 9 
+Sold 0.00087 BTC at 45964.58 USDT per BTC (39.9891846 USDT). 
+10:01
+Trade 10 
+Bought 0.00087 BTC at 46077.38 USDT per BTC (40.0873206 USDT). 
+10:05
+Closed trade 10 
+Sold 0.00087 BTC at 46015.81 USDT per BTC (40.033754699999996 USDT). 
+10:27
+Trade 11 
+Bought 0.00087 BTC at 46029.19 USDT per BTC (40.0453953 USDT). 
+10:27
+Closed trade 11 
+Sold 0.00087 BTC at 46130.0 USDT per BTC (40.1331 USDT). 
+10:58
+Trade 12 
+Bought 0.00087 BTC at 46191.8 USDT per BTC (40.186866 USDT). 
+11:07
+Closed trade 12 
+Sold 0.00087 BTC at 46290.99 USDT per BTC (40.2731613 USDT). 
+11:36
+Trade 13 
+Bought 0.00086 BTC at 46246.58 USDT per BTC (39.7720588 USDT). 
+11:38
+Closed trade 13 
+Sold 0.00086 BTC at 46182.56 USDT per BTC (39.717001599999996 USDT). 
+Fri Sep 10 12:27:13 2021
+Opening balance: 47.77266955 USDT. 
+Closing balance: 47.77266955 USDT. 
+
+Fri Sep 10 12:31:03 2021
+Opening balance: 47.77266955 USDT. 
+Closing balance: 47.77266955 USDT. 
+
+Fri Sep 10 12:33:17 2021
+Opening balance: 47.77266955 USDT. 
+Closing balance: 47.77266955 USDT. 
+
+Fri Sep 10 12:35:02 2021
+Opening balance: 47.77266955 USDT. 
+12:37
+Trade 14 
+Bought 0.00087 BTC at 46172.23 USDT per BTC (40.1698401 USDT). 
+Closing balance: 7.59911455 USDT. 
+
+Fri Sep 10 12:39:30 2021
+Opening balance: 0.00179703 BTC. 
+Closing balance: 0.00179703 BTC. 
+
+Fri Sep 10 12:42:23 2021
+Opening balance: 0.00179703 BTC. 
+Closing balance: 0.00179703 BTC. 
+
+12:44
+Closed trade 14 
+Sold 0.00087 BTC at 46123.63 USDT per BTC (40.127558099999995 USDT). 
+Fri Sep 10 12:46:33 2021
+Opening balance: 47.72666395 USDT. 
+Closing balance: 47.72666395 USDT. 
+
+Fri Sep 10 12:56:38 2021
+Opening balance: 47.72666395 USDT. 
+Closing balance: 47.72666395 USDT. 
+
+Fri Sep 10 13:12:33 2021
+Opening balance: 47.72666395 USDT. 
+14:31
+Trade 15 
+Bought 0.00087 BTC at 46205.05 USDT per BTC (40.1983935 USDT). 
+14:32
+Closed trade 15 
+Sold 0.00087 BTC at 46111.94 USDT per BTC (40.1173878 USDT). 
+Fri Sep 10 15:50:12 2021
+Opening balance: 47.66019595 USDT. 
+Closing balance: 47.66019595 USDT. 
+
+Fri Sep 10 15:55:43 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 16:01:33 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 16:05:13 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 16:11:05 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 16:22:57 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 16:30:31 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 16:45:45 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 17:01:46 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 17:19:53 2021
+Opening balance: 47.66019595 USDT. 
+Closing balance: 47.66019595 USDT. 
+
+Fri Sep 10 17:29:54 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 18:00:31 2021
+Opening balance: 47.66019595 USDT. 
+Closing balance: 47.66019595 USDT. 
+
+Fri Sep 10 18:02:36 2021
+Opening balance: 47.66019595 USDT. 
+Closing balance: 47.66019595 USDT. 
+
+Fri Sep 10 18:04:13 2021
+Opening balance: 47.66019595 USDT. 
+Closing balance: 47.66019595 USDT. 
+
+Fri Sep 10 18:05:26 2021
+Opening balance: 47.66019595 USDT. 
+Closing balance: 47.66019595 USDT. 
+
+Fri Sep 10 18:08:58 2021
+Opening balance: 47.66019595 USDT. 
+Fri Sep 10 18:14:50 2021
+Opening balance: 47.66019595 USDT. 
+20:38
+Trade 1 
+Bought 0.00024 BTC at 45609.2 USDT per BTC (10.946208 USDT). 
+21:07
+Closed trade 1 
+Sold 0.00024 BTC at 45793.87 USDT per BTC (10.990528800000002 USDT). 
+23:16
+Trade 2 
+Bought 0.00025 BTC at 44607.38 USDT per BTC (11.151845 USDT). 
+23:29
+Closed trade 2 
+Sold 0.00025 BTC at 44787.15 USDT per BTC (11.196787500000001 USDT). 
+00:05
+Trade 3 
+Bought 0.00025 BTC at 44529.22 USDT per BTC (11.132305 USDT). 
+00:11
+Trade 4 
+Bought 0.00025 BTC at 44572.23 USDT per BTC (11.143057500000001 USDT). 
+00:14
+Closed trade 3 
+Sold 0.00025 BTC at 44713.27 USDT per BTC (11.178317499999999 USDT). 
+00:18
+Closed trade 4 
+Sold 0.00025 BTC at 44756.01 USDT per BTC (11.1890025 USDT). 
+Closing balance: 47.84001925 USDT. 
+
+Sat Sep 11 01:49:42 2021
+Opening balance: 47.84001925 USDT. 
+Closing balance: 47.84001925 USDT. 
+
+Sat Sep 11 01:52:05 2021
+Opening balance: 47.84001925 USDT. 
+Sat Sep 11 01:57:07 2021
+Opening balance: 47.84001925 USDT. 
+01:59
+Trade 1 
+Bought 0.00027 BTC at 45200.0 USDT per BTC (12.204 USDT). 
+01:59
+Closed trade 1 
+Sold 0.00027 BTC at 45202.05 USDT per BTC (12.204553500000001 USDT). 
+Closing balance: 47.84057005 USDT. 
+
+Sat Sep 11 02:01:27 2021
+Opening balance: 47.84057005 USDT. 
+Sat Sep 11 02:08:09 2021
+Opening balance: 47.84057005 USDT. 
+Sat Sep 11 02:09:45 2021
+Opening balance: 47.84057005 USDT. 
+Closing balance: 47.84057005 USDT. 
+
+Sat Sep 11 02:14:37 2021
+Opening balance: 47.84057005 USDT. 
+Closing balance: 47.84057005 USDT. 
+
+Sat Sep 11 02:19:35 2021
+Opening balance: 47.84057005 USDT. 
+Sat Sep 11 02:27:18 2021
+Opening balance: 47.84057005 USDT. 
+Sat Sep 11 02:54:47 2021
+Opening balance: 89.60326165 USDT. 
+Sat Sep 11 03:09:09 2021
+Opening balance: 89.60326165 USDT. 
+03:09
+Trade 1 
+Bought 0.00044 BTC at 45446.23 USDT per BTC (19.996341200000003 USDT). 
+03:22
+Closed trade 1 
+Sold 0.00044 BTC at 45351.51 USDT per BTC (19.954664400000002 USDT). 
+Sat Sep 11 13:32:32 2021
+Opening balance: 89.56158045 USDT. 
+Sat Sep 11 13:35:30 2021
+Opening balance: 89.56158045 USDT. 
+Sat Sep 11 13:41:18 2021
+Opening balance: 89.56158045 USDT. 
+13:44
+Trade 1 
+Bought 0.00033 BTC at 45656.02 USDT per BTC (15.0664866 USDT). 
+13:45
+Closed trade 1 
+Sold 0.00033 BTC at 45667.68 USDT per BTC (15.0703344 USDT). 
+Closing balance: 89.56538865 USDT. 
+
+Sat Sep 11 13:51:31 2021
+Opening balance: 89.56538865 USDT. 
+Sat Sep 11 13:54:28 2021
+Opening balance: 89.56538865 USDT. 
+14:57
+Trade 1 
+Bought 0.00033 BTC at 45580.0 USDT per BTC (15.0414 USDT). 
+15:27
+Closed trade 1 
+Sold 0.00033 BTC at 45765.87 USDT per BTC (15.1027371 USDT). 
+17:00
+Trade 2 
+Bought 0.00033 BTC at 45574.09 USDT per BTC (15.039449699999999 USDT). 
+17:04
+Closed trade 2 
+Sold 0.00033 BTC at 45466.12 USDT per BTC (15.0038196 USDT). 
+17:24
+Trade 3 
+Bought 0.00033 BTC at 45536.36 USDT per BTC (15.0269988 USDT). 
+17:35
+Closed trade 3 
+Sold 0.00033 BTC at 45722.18 USDT per BTC (15.0883194 USDT). 
+Closing balance: 89.65017225 USDT. 
+
+Closing balance: 89.65017225 USDT. 
+
