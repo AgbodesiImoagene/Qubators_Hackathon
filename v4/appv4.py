@@ -51,7 +51,8 @@ def resource_path(relative_path):
 
     return join(base_path, relative_path)
 
-FILE_NAME = resource_path('TradeRecords.txt')
+FILE_NAME = 'TradeRecords.txt'
+ERROR_LOG = resource_path('log.bin')
 logoImg = resource_path('Logo.ico')
 nameImg = resource_path('NameCropped.png')
 welcomeImg = resource_path('Welcome.png')
@@ -67,6 +68,8 @@ rcParams['font.size'] = 10
 
 myFmt = DateFormatter('%H:%M')
 mns = MinuteLocator()
+
+# sys.stdout = open(ERROR_LOG, 'w')
 
 if not args.restart:
     useTestnet = ''
@@ -93,8 +96,8 @@ else:
     tp = float(args.all[3])
     trade_allocation = float(args.all[4])
     useClosingTime = int(args.all[5])
-    startTime = int(args.all[6])
-    closingTime = int(args.all[7])
+    startTime = float(args.all[6])
+    closingTime = float(args.all[7])
     strategy = int(args.all[8])
     quote = args.all[9]
     trade_count = qQueue()
@@ -127,7 +130,6 @@ startQuoteBalance = ''
 currentBaseBalance = {}
 currentQuoteBalance = ''
 chart_num = ''
-close = False
 maxQuote = ''
 min_trade_allocation = ''
 
@@ -1810,7 +1812,8 @@ class TheWindow:
                   'chart': chartScrollables, 
                   'sliders': slidersFrame, 
                   'positions': openTradesListbox, 
-                  'sell': sellButton}
+                  'sell': sellButton, 
+                  'reload': reloadButton}
         sliders = {'tp': tpScale, 'sl': slScale}
         self.startAsync(frames, sliders)
     
@@ -1875,7 +1878,7 @@ class TheWindow:
             return
 
     def startAsync(self, frames, sliders):
-        self.thread = AsyncioThread(self)
+        self.thread = AsyncioThread(self, 0)
         self.thread.start()
         self.root.protocol('WM_DELETE_WINDOW', lambda: self.on_closing())
         try:
@@ -1891,7 +1894,7 @@ class TheWindow:
     def reload(self, button, tradesListbox):
         button.configure(state='disabled')
         temp = self.thread
-        self.thread = AsyncioThread(self)
+        self.thread = AsyncioThread(self, 1)
         while tradesListbox.size() != 0:
             tradesListbox.delete("end")
         self.thread.start()
@@ -1908,7 +1911,7 @@ class TheWindow:
         button.configure(state='disabled')
         self.thread.sellQ.put_nowait(tradesListbox.curselection()[0])
         tsleep(1)
-        if not close and not tradesListbox.curselection() == ():
+        if not tradesListbox.curselection() == ():
             button.configure(state='normal')
         else:
             button.configure(state='disabled')
@@ -2016,28 +2019,26 @@ class TheWindow:
                 elif pos[0] == 'del':
                     frames['positions'].delete(pos[1])
             if not self.thread.errors.empty():
-                e = self.thread.errors.get_nowait()
-                messagebox.showerror(
-                    title="Error",
-                    message=str(e) + "\nAutoTrader will now restart.")
-                self.root.protocol('WM_DELETE_WINDOW', lambda: sys.exit())
-                restartProgram()
-            if not close and not frames['positions'].curselection() == ():
+                self.thread.errors.get_nowait()
+                self.reload(frames['reload'], frames['positions'])
+            if not frames['positions'].curselection() == ():
                 frames['sell'].configure(state='normal')
             else:
                 frames['sell'].configure(state='disabled')
-            if not close:
-                tp = sliders['tp'].get()
-                sl = sliders['sl'].get()
+            if not self.thread.closeQ.empty():
+                closeProgram()
+            tp = sliders['tp'].get()
+            sl = sliders['sl'].get()
             self.root.update()
             tsleep(0.1)
 
 class AsyncioThread(Thread):
-    def __init__(self, theWindow):
+    def __init__(self, theWindow, stat):
         self.asyncio_loop = new_event_loop()
         set_event_loop(self.asyncio_loop)
         
         self.theWindow = theWindow
+        self.stat = stat
         Thread.__init__(self)
         self.daemon = True
         self.killed = False
@@ -2071,10 +2072,6 @@ class AsyncioThread(Thread):
             self.open_positions.get_nowait()
         self.open_positions.put_nowait([])
         try:
-            self.client.close_connection()
-        except:
-            pass
-        try:
             self.asyncio_loop.stop()
         except:
             pass
@@ -2090,7 +2087,6 @@ class AsyncioThread(Thread):
     async def trader(self):
         self.open_positions = Queue()
         self.price = LifoQueue()
-        self.price_buy = LifoQueue()
         self.price_sell = LifoQueue()
         self.data = Queue()
         self.data_frame = Queue()
@@ -2099,8 +2095,10 @@ class AsyncioThread(Thread):
         self.trades = Queue()
         self.errors = Queue()
         self.open_positions_display = Queue()
-        self.stopQ = Queue()
         self.sellQ = Queue()
+        self.close_positionsQ = qQueue()
+        self.doneQ = qQueue()
+        self.closeQ = Queue()
                 
         try:
             self.client = await AsyncClient.create(API_KEY, SECRET_KEY, testnet=useTestnet)
@@ -2109,7 +2107,6 @@ class AsyncioThread(Thread):
 
         temp = curr_open_positions.get()
         curr_open_positions.put_nowait(temp)
-        self.stopQ.put_nowait(1)
         
         await self.open_positions.put(temp)
         for t in temp:
@@ -2121,7 +2118,8 @@ class AsyncioThread(Thread):
         except Exception as e:
             self.asyncio_loop.call_soon_threadsafe(self.errors.put_nowait, str(e))
         
-        self.save_to_records(startQuoteBalance, 'open')
+        if not self.stat:
+            self.save_to_records(startQuoteBalance, 'open')
         self.tasks = [create_task(self.check_closing_time()),
                       create_task(self.kline_data()),  
                       create_task(self.update_data()),
@@ -2135,15 +2133,15 @@ class AsyncioThread(Thread):
             await gather(*self.tasks)
         except Exception:
             self.theWindow.root.protocol('WM_DELETE_WINDOW', lambda: sys.exit())
+
         
         return
 
     async def check_closing_time(self):
-        global close
         if useClosingTime:
             while time_diff() < closingTime and time_diff() < 86400:
                 await sleep(10)
-            close = True
+            self.closeQ.put_nowait(1)
 
     async def kline_data(self):
         streams = []
@@ -2154,7 +2152,7 @@ class AsyncioThread(Thread):
         ms = self.bm.multiplex_socket(streams)
         myKeys = ['s', 't', 'o', 'h', 'l', 'c', 'v', 'T', 'q', 'n', 'V', 'Q']
         async with ms as mscm:
-            while not close:
+            while True:
                 try:
                     a = await mscm.recv()
                 except Exception as e:
@@ -2163,12 +2161,10 @@ class AsyncioThread(Thread):
                     a = a['data']
                     res = a['k']
                     self.asyncio_loop.call_soon_threadsafe(self.price.put_nowait, [float(res['c']), res['s']])
-                    self.asyncio_loop.call_soon_threadsafe(self.price_buy.put_nowait, [float(res['c']), res['s']])
                     self.asyncio_loop.call_soon_threadsafe(self.price_sell.put_nowait, [float(res['c']), res['s']])
                     if res['x']:
                         candle = [res[x] for x in myKeys]
                         self.asyncio_loop.call_soon_threadsafe(self.data.put_nowait, candle)
-        return
 
     async def update_data(self):
         dfs = await self.get_historical_data()
@@ -2176,7 +2172,7 @@ class AsyncioThread(Thread):
             p = b + quote
             df = dfs[p]
             self.data_frame_figure.put_nowait([df, p])
-        while not close:
+        while True:
             new_row = await self.data.get()
             p = new_row[0]
             new_row.remove(p)
@@ -2344,7 +2340,7 @@ class AsyncioThread(Thread):
         return dfs
 
     async def generate_signals(self):
-        while not close:
+        while self.close_positionsQ.empty():
             [df, p] = await self.data_frame.get()
             if strategy == 0:
                 pass
@@ -2437,7 +2433,7 @@ class AsyncioThread(Thread):
         self.asyncio_loop.call_soon_threadsafe(self.signals.put_nowait, b + quote)
 
     async def manualSell(self):
-        while not close:
+        while self.close_positionsQ.empty():
             if not self.sellQ.empty():
                 i = self.sellQ.get_nowait()
                 sell_list = await self.open_positions.get()
@@ -2457,14 +2453,14 @@ class AsyncioThread(Thread):
             await sleep(0.5)
         
     async def place_buy_order(self):
-        while not close:
+        while self.close_positionsQ.empty():
             p = await self.signals.get()
             try:
                 balance = await self.client.get_asset_balance(asset=quote)
+                data = await self.client.get_symbol_ticker(symbol=p)
             except Exception as e:
                 self.asyncio_loop.call_soon_threadsafe(self.errors.put_nowait, str(e))
             else:
-                data = await self.client.get_symbol_ticker(symbol=p)
                 current_price = float(data['price'])
                 balance = float(balance['free'])
                 quantity =  trade_allocation / current_price
@@ -2498,8 +2494,7 @@ class AsyncioThread(Thread):
             order = await self.client.order_market_buy(
                 symbol=p,
                 quantity=qty)
-        except Exception as e:
-            self.asyncio_loop.call_soon_threadsafe(self.errors.put_nowait, str(e))
+        except Exception:
             return False
         else:
             while True:
@@ -2529,7 +2524,7 @@ class AsyncioThread(Thread):
                         return True
     
     async def place_sell_order(self):        
-        while not close:
+        while self.close_positionsQ.empty():
             [current_price, p] = await self.price_sell.get()
             sell_list = await self.open_positions.get()
             await self.open_positions.put(sell_list)
@@ -2567,10 +2562,11 @@ class AsyncioThread(Thread):
                 return True
         
     async def close_positions(self):
-        while not close:
+        while self.close_positionsQ.empty():
             await sleep(0.5)
-        await self.stopQ.get()
-        res = await self.open_positions.get()
+        self.close_positionsQ.get()
+        temp = await self.open_positions.get()
+        res = temp.copy()
         self.open_positions.put_nowait(res)
         if not res == []:
             try:
@@ -2582,18 +2578,16 @@ class AsyncioThread(Thread):
                     prices[b] = price
                     
                 for i in res:
-                    await self.sell(i['qty'], prices[i['base']], i['id'], i['base'] + quote, res.index(i))
+                    await self.sell(i['qty'], prices[i['base']], i['id'], i['base'] + quote, 0)
 
                 closing_balance = await self.client.get_asset_balance(asset=quote)
                 closing_balance = float(closing_balance['free'])
                 self.save_to_records(closing_balance, 'close')
-            except Exception:
+            except Exception as e:
                 self.save_to_records(currentQuoteBalance, 'close')
-                self.stopQ.put_nowait(1)
-                return
-            
-        self.save_to_records(currentQuoteBalance, 'close')
-        self.stopQ.put_nowait(1)
+        else:            
+            self.save_to_records(currentQuoteBalance, 'close')
+        self.doneQ.put(1)
 
     def save_to_records(self, balance, trade_period):
         try:
@@ -2683,17 +2677,8 @@ def plotStochastic(df, x, ax):
     return ax
     
 def closeProgram():
-    global close
-
-    close = True
-        
-    tsleep(1)
-    while window.thread.stopQ.empty():
-        tsleep(0.5)
-    try:
-        window.thread.client.close_connection()
-    except:
-        pass
+    window.thread.close_positionsQ.put(1)
+    window.thread.doneQ.get()
     try:
         window.thread.asyncio_loop.stop()
     except:
@@ -2710,22 +2695,6 @@ def closeProgram():
         pass
 
 def restartProgram():
-    global close
-
-    close = True
-        
-    try:
-        window.thread.client.close_connection()
-    except:
-        pass
-    try:
-        window.thread.asyncio_loop.stop()
-    except:
-        pass
-    try:
-        window.thread.asyncio_loop.close()
-    except:
-        pass
     temp = trade_count.get()
     command = 'AutoTrader -r '
     if useTestnet:
@@ -2739,6 +2708,16 @@ def restartProgram():
         command = command + '-o '
         for i in t.values():
             command = command + f'{i} '
+            
+    try:
+        window.thread.asyncio_loop.stop()
+    except:
+        pass
+    try:
+        window.thread.asyncio_loop.close()
+    except:
+        pass
+
     window.root.quit()
     window.root.destroy()
     os.system(command)

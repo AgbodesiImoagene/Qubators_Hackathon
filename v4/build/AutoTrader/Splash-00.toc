@@ -1,6 +1,6 @@
 ('NewSplash.ico',
- 'C:\\Users\\agbod\\GitHub\\Qubators_Hackathon\\v4\\build\\AutoTrader\\Splash-00.res',
- 'C:\\Users\\agbod\\GitHub\\Qubators_Hackathon\\v4\\build\\AutoTrader\\Splash-00_script.tcl',
+ 'C:\\Users\\agbod\\GitHub\\Qubators_Hackathon\\v4\\build\\autotrader\\Splash-00.res',
+ 'C:\\Users\\agbod\\GitHub\\Qubators_Hackathon\\v4\\build\\autotrader\\Splash-00_script.tcl',
  None,
  12,
  'TkDefaultFont',
